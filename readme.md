@@ -2,6 +2,8 @@
 
 Simple program to see if simple sprite add/remove can crash the whole thing.
 
+Currently it only tests on Windows 7/10 at the moment.
+
 # Used Libs
 Probably not need so much, I use OpenFL+Lime+SVG
 ```
@@ -23,8 +25,14 @@ openfl: 3.6.1 4.7.0 4.9.0 5.1.1 6.5.3 7.1.2 8.0.2 8.1.1 8.9.6 8.9.7 9.0.0 9.0.2 
 svg: 1.1.2 [1.1.3]
 swf: 2.3.1 3.0.0 [3.0.2]
 tink_core: [1.26.0]
+
+> HashLink version is 1.10
 ```
 
 # Current Casualty(s)
-* Hashlink: SVG, TextField
+## Simple Object with thing (Main)
+* HashLink: SVG, TextField
 * Neko: SVG (need more test. It keeps increasing, but too slow to make it reach 2GB/4GB and crash)
+
+## A TextField that change content every frame @ 60 FPS (MainTextfield)
+* HashLink (dead after ~18 hours)
